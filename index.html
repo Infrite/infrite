@@ -209,7 +209,7 @@
 <script>
 function validateUser() {
   var status = document.getElementById("Div1").innerHTML ;
-  if(status.contains("Signed In")){
+  if(status.includes("Signed In")){
   alert("Valid User. Continue");
   return true;
   }
