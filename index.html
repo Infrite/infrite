@@ -23,8 +23,14 @@
 //for node.js use global instead of window
 //var console = global.console;
 console.log = function(msg){
-  if(msg.includes('Email:'))
-    return true;
+  if(msg.includes('Email:')){
+    
+	  alert("Active User");
+	  return true;
+  }
+else
+	alert("Please Login First");
+
 }
      return false;
 }
