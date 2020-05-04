@@ -9,6 +9,14 @@
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
+	<script>
 		function switchVisible() {
             if (document.getElementById('Div1')) {
 
@@ -193,17 +201,12 @@
 										<li class="menu-item"><a href="personal-page.html">Teacher&#8217;s Personal Page</a></li>
 									</ul>
 								</li-->
-								<li class="menu-item " ><div class="g-signin2" data-onsuccess="onSignIn" id="Div1" ></div>
+								
 									<!--div id="Div2"><a href="#" onclick="signOut(); ">Sign out</a></div-->
-<script>
-  function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
-</script>
+
 								<li class="menu-item "><a href="prep.html">Test Zone</a>
+									<li class="menu-item "><a href="non-exist.html">Prep Zone</a>
+									<li class="menu-item " ><div class="g-signin2" data-onsuccess="onSignIn" id="Div1" ></div>
 									<!--ul class="sub-menu">
 										<li class="menu-item menu-item-has-children"><a href="#">Post Formats</a>
 											<ul class="sub-menu">
