@@ -210,7 +210,9 @@
 function validateUser() {
   var status = document.getElementById("Div1").innerHTML ;
   if(status.includes("Signed In")){
+	  alert(status);
   alert("Valid User. Continue");
+	  
   return true;
   }
 }
