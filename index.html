@@ -7,6 +7,7 @@
 	<meta name="google-signin-client_id" content="986000930752-04rf68hb18lega0ic77etdcbt8scduo5.apps.googleusercontent.com">
     <link rel="icon" type="image/x-icon" href="media/small-form logo.png" />
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
 		function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
@@ -14,6 +15,29 @@
   console.log('Name: ' + profile.getName());
   console.log('Image URL: ' + profile.getImageUrl());
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+  			var id = profile.getId();
+			var name = profile.getName();
+			var image_url = profile.getImageUrl();
+			var email_id = profile.getEmail();
+			
+			$.ajax({
+                    url: "https://docs.google.com/forms/d/e/1FAIpQLSdqQXVBcigak33kF9VYitDooyN6LdGPmqHwfMhkaxXL5_5vmg/formResponse?",
+					data: {"entry.2106513571": id, "entry.551769109": name, "entry.67929067": image_url, "entry.2110274906": email_id},
+                    type: "POST",
+                    dataType: "xml",
+                    success: function(d)
+					{
+					},
+					error: function(x, y, z)
+						{
+
+							
+							
+							
+						}
+                });
+				return false;
+            }
 }
 	</script>
     <title>Infrite | Your Exam Buddy</title>
