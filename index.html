@@ -209,11 +209,11 @@
 <script>
 function validateUser() {
   var status = document.getElementById("Div1").innerHTML ;
-  if(status.includes("none>"+"Signed In")){
+  if(status.includes("none"+'"'+">Signed In")){
 	  alert(status);
-  alert("Valid User. Continue");
+  alert("InValid User. Please Sign in");
 	  
-  return true;
+  return false;
   }
 }
 </script>
