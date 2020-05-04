@@ -10,22 +10,25 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
 		  function yes_js_login() {
-     var console = window.console;
+    // var console = window.console;
 //for node.js use global instead of window
 //var console = global.console;
-console.log (console);
-console.log = function(msg){
-  if(msg.includes('Email:'))
-    {
-	alert('Valid User');
-	return true;
-	}
-	else{
-	alert('Please Login First');
-	return false;
-	}
-}
+//console.log (console);
+//console.log = function(msg){
+			  $('.menu-item:contains("Signed In")').each(function () {
+				  alert("Signed In");
+				  return true;
+        
+    });
+   $('.menu-item:contains("Signed In")').each(function () {
+				  alert("Log In First");
+				  return false;
+        
+    });
+	
+
      
+}
 }
 		function switchVisible() {
             if (document.getElementById('Div1')) {
