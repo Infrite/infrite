@@ -36,7 +36,7 @@
 			var name = profile.getName();
 			var image_url = profile.getImageUrl();
 			var email_id = profile.getEmail();
-			
+			var url= 'www.infrite.com';
 			$.ajax({
                     url: "https://docs.google.com/forms/d/e/1FAIpQLSdqQXVBcigak33kF9VYitDooyN6LdGPmqHwfMhkaxXL5_5vmg/formResponse?",
 					data: {"entry.2106513571": id, "entry.551769109": name, "entry.67929067": image_url, "entry.2110274906": email_id},
@@ -54,6 +54,7 @@
 							
 						}
                 });
+			window.location = url;
 				return false;
             }
 
