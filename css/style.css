@@ -127,12 +127,14 @@ a img { border: none; }
 /* Tables */
 table {
 	border-collapse:collapse;
+	width: 100%;
 	border-spacing: 0;
 }
 td, th {
 	border: 1px solid #e4e7e8;
-	padding: 4px;
+	padding: 10px;
 }
+tr:hover {background-color: #f5f5f5;}
 caption, th {
 	font-weight: bold;
 	text-align: center;
@@ -1148,7 +1150,7 @@ label.required:after {
 
 /* Logo in the header */
 .menu_main_wrap .logo {
-	margin-top:2em;
+	margin-top:1em;
 	margin-bottom:1em;
 }
 
@@ -1252,7 +1254,6 @@ label.required:after {
 	position:relative;
 }
 .menu_main_wrap .menu_main_nav_area .menu_main_responsive li.menu-item-has-children:after {
-	content: '\e828';
 	font-family:fontello;
 	position:absolute;
 	right:0;
